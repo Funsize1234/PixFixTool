@@ -1,0 +1,2 @@
+# PixFixTool
+Fix Stuck Pixels
