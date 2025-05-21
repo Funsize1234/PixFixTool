@@ -27,12 +27,13 @@ const cbutton = document.getElementById("color-button");
 const colors = ["black", "white", "red", "green", "blue", "cyan", "magenta", "yellow"];
 let cindex = 0;
 
+document.getElementById("body").style.backgroundColor = "black";
 cbutton.addEventListener("click", () => {
     cindex++;
     if(cindex >= colors.length) {
         cindex = 0;
     }
-    content.style.backgroundColor = colors[cindex];
+    document.getElementById("body").style.backgroundColor = colors[cindex];
 });
 
 
@@ -60,7 +61,7 @@ function loop() {
 
 
 let offset = 0, offsetY = 0, startX = 0, startY = 0;
-document.addEventListener("mousedown", mouseDown);
+canvas.addEventListener("mousedown", mouseDown);
 
 function mouseDown(e) {
     offsetX = e.clientX - canvas.offsetLeft;
