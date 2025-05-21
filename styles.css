@@ -1,0 +1,14 @@
+body, button {
+    font-family: Andale Mono, monospace;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 0;
+    gap: 3rem;
+}
+

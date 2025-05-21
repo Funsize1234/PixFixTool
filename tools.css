@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+}
+
+body, button {
+    font-family: Andale Mono, monospace;
+}
+
+html {
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+#button-row {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 12px;
+
+    
+}
+
+#fullscreen {
+    margin-left: auto;
+}
+
+#tool {
+    cursor: grab;
+    position: fixed;
+    top: 120px;
+    left: 100px;
+}
