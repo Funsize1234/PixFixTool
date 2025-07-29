@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+}
+
+#button-row {
+    width: 100%;
+    max-width: 800px;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+    padding: 1rem;
+    background: rgb(255, 255, 255);
+    border-radius: 980px;
+    
+}
+
+button {
+    padding: 1.2rem 3rem;
+    font-size: 1.2rem;
+    background-color: hsl(210, 100%, 45%);
+    color: white;
+    border: none;
+    border-radius: 980px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+button:hover {
+    background-color: hsl(210, 100%, 46%);
+    transform: scale(1.02);
+  }
+  
+  button:active {
+    transform: scale(0.98);
+  }
+
+#tool {
+    position: absolute;
+    top: 150px;
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+#demo {
+    position: absolute;
+    left: 0;
+    top: 0;
+}

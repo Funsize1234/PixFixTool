@@ -2,64 +2,142 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Display', 'Helvetica Neue', sans-serif;
+}
+
+:root {
+  --apple-gray: #86868b;
+  --apple-black: #1d1d1f;
+  --apple-blue: hsl(210, 100%, 45%);
+  --apple-background: #fbfbfd;
 }
 
 body {
   min-height: 100vh;
-  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+  background-color: var(--apple-background);
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   padding: 2rem;
+  color: var(--apple-black);
+  text-align: center;
+  position: relative;
+}
+
+.content-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  width: 100%;
+  max-width: 600px;
 }
 
 header {
   text-align: center;
-  margin-bottom: 3rem;
+  opacity: 0;
+  animation: fadeInUp 1s ease forwards;
+  width: 100%;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 h1 {
-  font-size: 3rem;
-  color: #2c3e50;
+  font-size: 3.5rem;
+  font-weight: 600;
+  letter-spacing: -0.5px;
   margin-bottom: 1rem;
+  background: linear-gradient(90deg, var(--apple-black), var(--apple-gray));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 0.3s;
+  text-align: center;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
 
 header p {
-  font-size: 1.2rem;
-  color: #34495e;
+  font-size: 1.4rem;
+  color: var(--apple-gray);
+  font-weight: 400;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 0.6s;
+  text-align: center;
 }
 
 main {
   width: 100%;
-  max-width: 600px;
   text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 0.9s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #launch {
-  padding: 1rem 2.5rem;
+  padding: 1.2rem 3rem;
   font-size: 1.2rem;
-  background-color: #3498db;
+  background-color: var(--apple-blue);
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 980px;
   cursor: pointer;
-  transition: transform 0.2s, background-color 0.2s;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  text-align: center;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 #launch:hover {
-  background-color: #2980b9;
-  transform: translateY(-2px);
+  background-color: #0077ED;
+  transform: scale(1.02);
 }
 
 #launch:active {
-  transform: translateY(0);
+  transform: scale(0.98);
 }
 
 footer {
-  margin-top: auto;
+  position: absolute;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
   padding: 1rem;
-  color: #7f8c8d;
+  color: var(--apple-gray);
+  font-size: 0.9rem;
+  opacity: 0;
+  animation: fadeIn 1s ease forwards 1.2s;
+  text-align: center;
+  width: 100%;
+}
+
+/* Add smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Add text selection styling */
+::selection {
+  background-color: var(--apple-blue);
+  color: white;
 }
 

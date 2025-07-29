@@ -40,7 +40,11 @@ cbutton.addEventListener("click", () => {
 const canvas = document.getElementById("tool");
 const tool = canvas.getContext("2d");
 
-tool.fillStyle = "rgb(174, 174, 174)";
+if(cindex % 2 == 0) {
+  console.log(cindex);
+}
+tool.fillStyle = "rgb(255,255,255)";
+
 tool.fillRect(0,0,canvas.width, canvas.height);
 
 const randomDraw = () => {
